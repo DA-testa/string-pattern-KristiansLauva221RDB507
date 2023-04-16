@@ -25,7 +25,7 @@ def get_occurrences(pattern, text):
     HashT = 0
     for i in range(len(pattern)):
         hashP = (hashP * 263 + ord(pattern[i])) % 10**9
-        HashT = (HashT * 262 + ord(text[i])) % 10**9
+        HashT = (HashT * 263 + ord(text[i])) % 10**9
     
     for i in range(len(text) - len(pattern) + 1):
         if hashP == HashT:
